@@ -1,3 +1,14 @@
 body {
+  max-width: 1470px;
+  margin: 0 auto;
+  background-color: $bg;
+  font-family: $montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+}
 
+.container  {
+  max-width: 1070px;
+  margin: 0 auto;
 }
