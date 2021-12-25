@@ -4,5 +4,73 @@
 @import 'libs';
 @import 'global';
 
+.header {
+  max-width: 1175px;
+  margin: 0 auto;
+  padding: 23px 5px 23px 15px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  margin: 0 70px 0 0;
+  padding-top: 10px;
+
+  &__list {
+    display: flex;
+    margin-right: 40px;
+  }
+
+  &__item + .menu__item {
+    padding-left: 30px;
+  }
+
+  &__item {
+    &:nth-child(3) {
+      padding-right: 10px;
+    }
+  }
+
+
+  &__link {
+    font-weight: 400;
+    color: $text;
+    transition: all .3s;
+    outline: transparent;
+
+    &:hover {
+      color: $accent;
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all .3s;
+    }
+
+    &:active {
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:focus {
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+}
+
+
+
+
+
 
 @import 'media';
