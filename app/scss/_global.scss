@@ -1,8 +1,15 @@
+html,
 body {
-  max-width: 1470px;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   background-color: $bg;
   font-family: $montserrat;
+  color: $text;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
@@ -11,4 +18,8 @@ body {
 .container  {
   max-width: 1070px;
   margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
 }
