@@ -3,4 +3,10 @@ $ (function() {
     dots: true,
     fade: true
   });
+
+  $('.nova__inner').slick({
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
 });
