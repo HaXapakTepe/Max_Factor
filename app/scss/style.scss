@@ -3,344 +3,462 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
+
 .header {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 1175px;
-    padding: 24px 0 23px 5px;
-    z-index: 5;
-    &__container {
-        max-width: 1175px;
-        margin: 0 auto;
-    }
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo {
-        margin-right: 55px;
-    }
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 1175px;
+  padding: 24px 0 23px 5px;
+  z-index: 5;
+
+  &__container {
+    max-width: 1175px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 55px;
+  }
 }
 
 .menu {
-    padding-top: 10px;
-    margin-right: auto;
-    &__list {
-        display: flex;
-        margin-right: 40px;
+  padding-top: 10px;
+  margin-right: auto;
+
+  &__list {
+    display: flex;
+    margin-right: 40px;
+  }
+
+  &__item+.menu__item {
+    padding-left: 31px;
+  }
+
+  &__item {
+    &:first-child {
+      margin-left: -3px;
     }
-    &__item+.menu__item {
-        padding-left: 31px;
+
+    &:nth-child(2) {
+      padding-right: 2px;
     }
-    &__item {
-        &:first-child {
-            margin-left: -3px;
-        }
-        &:nth-child(2) {
-            padding-right: 2px;
-        }
-        &:nth-child(3) {
-            padding-right: 4px;
-        }
-        &:nth-child(4) {
-            padding-right: 4px;
-        }
-        &:nth-child(5) {
-            padding-right: 2px;
-        }
+
+    &:nth-child(3) {
+      padding-right: 4px;
     }
-    &__link {
-        font-weight: 400;
-        color: $text;
-        transition: all .3s;
-        outline: transparent;
-        &:hover {
-            color: $accent;
-            background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all .3s;
-        }
-        &:active {
-            background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        &:focus {
-            background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+
+    &:nth-child(4) {
+      padding-right: 4px;
     }
-    &__link--active {
-        color: $accent;
+
+    &:nth-child(5) {
+      padding-right: 2px;
     }
+  }
+
+  &__link {
+    font-weight: 400;
+    color: $text;
+    transition: all .3s;
+    outline: transparent;
+
+    &:hover {
+      color: $accent;
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all .3s;
+    }
+
+    &:active {
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:focus {
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+  }
 }
 
 .user-nav {
-    margin-right: 15px;
-    &__image {
-        border-bottom: 3px solid transparent;
-        transition: all .3s;
-        &:hover,
-        &:focus {
-            border-color: $accent;
-        }
+  margin-right: 15px;
+
+  &__image {
+    border-bottom: 3px solid transparent;
+    transition: all .3s;
+
+    &:hover,
+    &:focus {
+      border-color: $accent;
     }
+  }
 }
 
 .top-slider {
-    margin-bottom: 125px;
-    &__container {
-        max-width: 1445px;
-        margin: 0 auto;
-    }
-    &__list {
+  margin-bottom: 125px;
+
+  &__container {
+    max-width: 1445px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    position: relative;
+    display: flex !important;
+  }
+
+  &__picture {
+    padding-top: 249px;
+    margin-bottom: 44px;
+  }
+
+  &__image {
+    margin-right: 75px;
+  }
+
+  &__text {
+    max-width: 390px;
+    margin-bottom: 95px;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  &__image-mini {
+    position: absolute;
+    right: 5px;
+    bottom: -1px;
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    z-index: 5;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon/prev.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    z-index: 5;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon/next.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      padding: 0 5px;
+
+      button {
         position: relative;
-        display: flex !important;
-    }
-    &__picture {
-        padding-top: 249px;
-        margin-bottom: 44px;
-    }
-    &__image {
-        margin-right: 75px;
-    }
-    &__text {
-        max-width: 390px;
-        margin-bottom: 95px;
-        font-weight: 400;
-        font-size: 24px;
-    }
-    &__image-mini {
-        position: absolute;
-        right: 5px;
-        bottom: -1px;
-    }
-    .slick-prev {
-        position: absolute;
-        top: 50%;
-        left: 60px;
-        transform: translateY(-50%);
-        width: 46px;
-        height: 46px;
-        z-index: 5;
         padding: 0;
         font-size: 0;
-        border: none;
         background-color: transparent;
-        background-image: url('../images/icon/prev.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: transparent;
+        color: $dots;
         cursor: pointer;
         outline: transparent;
-    }
-    .slick-next {
-        position: absolute;
-        top: 50%;
-        right: 60px;
-        transform: translateY(-50%);
-        width: 46px;
-        height: 46px;
-        z-index: 5;
-        padding: 0;
-        font-size: 0;
-        border: none;
-        background-color: transparent;
-        background-image: url('../images/icon/next.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        cursor: pointer;
-        outline: transparent;
-    }
-    .slick-dots {
-        position: absolute;
-        display: flex;
-        bottom: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-        li {
-            padding: 0 5px;
-            button {
-                position: relative;
-                padding: 0;
-                font-size: 0;
-                background-color: transparent;
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                border: transparent;
-                color: $dots;
-                cursor: pointer;
-                outline: transparent;
-                transition: all .3s;
-                &::before {
-                    position: absolute;
-                    content: '';
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    background-color: $dots;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-                &:hover,
-                &:focus {
-                    background-color: $accent;
-                }
-            }
-            &.slick-active {
-                button {
-                    &::before {
-                        background-color: $accent;
-                    }
-                }
-            }
+        transition: all .3s;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: $dots;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
+
+        &:hover,
+        &:focus {
+          background-color: $accent;
+        }
+      }
+
+      &.slick-active {
+        button {
+          &::before {
+            background-color: $accent;
+          }
+        }
+      }
     }
+  }
 }
 
 .nova {
-    margin-bottom: 120px;
-    &__container {
-        max-width: 930px;
+  margin-bottom: 138px;
+
+  &__container {
+    max-width: 930px;
+  }
+
+  &__title {
+    margin-right: 3px;
+  }
+
+  &__item {
+    position: relative;
+    right: -15px;
+    max-width: 280px;
+    margin-bottom: 81px;
+    padding-top: 30px;
+    background-color: $bg-footer;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(142, 141, 141, 0.4);
     }
-    &__title {
-        margin-bottom: 65px;
-        text-align: center;
-        font-size: 36px;
-        color: $accent;
-    }
-    &__item {
-        position: relative;
-        right: -15px;
-        max-width: 280px;
-        margin-bottom: 80px;
-        padding-top: 30px;
-        background-color: $bg-footer;
-        transition: all .3s;
-        cursor: pointer;
-        &:hover {
-            background-color: rgba(142, 141, 141, 0.4);
-        }
-    }
-    &__image {
-        margin: auto;
-        margin-bottom: 50px;
-    }
-    &__text {
-        text-transform: uppercase;
-        text-align: center;
-        padding-bottom: 30px;
-    }
-    .slick-prev {
-        position: absolute;
-        top: 40%;
-        left: -50px;
-        transform: translateY(-40%);
-        width: 24px;
-        height: 57px;
-        z-index: 5;
-        padding: 0;
-        font-size: 0;
-        border: none;
-        background-color: transparent;
-        background-image: url('../images/icon/left.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        cursor: pointer;
-        outline: transparent;
-    }
-    .slick-next {
-        position: absolute;
-        top: 40%;
-        right: -45px;
-        transform: translateY(-40%);
-        width: 24px;
-        height: 57px;
-        z-index: 5;
-        padding: 0;
-        font-size: 0;
-        border: none;
-        background-color: transparent;
-        background-image: url('../images/icon/right.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        cursor: pointer;
-        outline: transparent;
-    }
-    &__link-box {
-        text-align: center;
-    }
-    &__link {
-        font-family: $roboto;
-        font-weight: 700;
-        padding: 12px 14px;
-    }
+  }
+
+  &__image {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 40%;
+    left: -50px;
+    transform: translateY(-40%);
+    width: 24px;
+    height: 57px;
+    z-index: 5;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon/left.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 40%;
+    right: -45px;
+    transform: translateY(-40%);
+    width: 24px;
+    height: 57px;
+    z-index: 5;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon/right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  &__link-box {
+    margin-right: 5px;
+    text-align: center;
+  }
+
+  &__link {
+    font-family: $roboto;
+    font-weight: 700;
+    padding: 12px 15px;
+  }
 }
 
+.history {
+  &__title {
+    margin: 0 10px 10px 0;
+  }
+
+  &__text {
+    margin-bottom: 55px;
+    text-align: center;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 55px 0 53px;
+  }
+
+  &__info {
+    padding-top: 40px;
+  }
+
+  &__num {
+    font-family: $roboto;
+    font-weight: 900;
+    font-size: 37px;
+  }
+
+  &__word {
+    font-weight: 700;
+    color: $accent;
+
+    &:not(:first-child) {
+      text-transform: uppercase;
+    }
+  }
+
+  &__info-text {
+    margin-bottom: 65px;
+    padding-top: 3px;
+
+    &:last-child {
+      padding-top: 12px;
+      margin-bottom: 40px;
+    }
+    
+  }
+
+  &__image {
+    display: flex;
+    position: relative;
+  }
+
+  &__img-little {
+    position: absolute;
+    bottom: 55px;
+    left: -146px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .footer {
-    padding-top: 80px;
-    border-top: 1px solid $text;
-    font-weight: 400;
+  padding-top: 80px;
+  border-top: 1px solid $text;
+  font-weight: 400;
 }
 
 .footer-top {
-    display: flex;
-    justify-content: space-between;
-    &__title {
-        font-size: 24px;
-        margin-bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 55px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 40px;
+    color: $text;
+    transition: all .5s;
+    outline: transparent;
+
+    &:last-child {
+      margin-bottom: 70px;
     }
-    &__link {
-        display: block;
-        margin-bottom: 40px;
-        color: $text;
-        transition: all .5s;
-        outline: transparent;
-        &:last-child {
-            margin-bottom: 70px;
-        }
-        &:hover {
-            color: $accent;
-            background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all .5s;
-        }
-        &:active {
-            background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        &:focus {
-            background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+
+    &:hover {
+      color: $accent;
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all .5s;
     }
-    &__link-en {
-        color: rgba(255, 255, 255, 0.55);
+
+    &:active {
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+
+    &:focus {
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__link-en {
+    color: rgba(255, 255, 255, 0.55);
+  }
 }
 
 .footer-bottom {
-    background-color: $bg-footer;
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        padding: 17px 0;
-    }
-    &__text {
-        font-size: 16px;
-    }
+  background-color: $bg-footer;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
 }
 
 @import 'media';
