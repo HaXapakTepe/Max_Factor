@@ -237,22 +237,24 @@
   }
 }
 
-.nova {
+.nova,
+.popular {
   margin-bottom: 138px;
 
   &__container {
-    max-width: 930px;
+    max-width: 940px;
   }
 
   &__title {
     margin-right: 3px;
+    margin-bottom: 64px;
   }
 
   &__item {
     position: relative;
     right: -15px;
     max-width: 280px;
-    margin-bottom: 81px;
+    margin-bottom: 82px;
     padding-top: 30px;
     background-color: $bg-footer;
     transition: all .3s;
@@ -276,8 +278,8 @@
 
   .slick-prev {
     position: absolute;
-    top: 40%;
-    left: -50px;
+    top: 39%;
+    left: -48px;
     transform: translateY(-40%);
     width: 24px;
     height: 57px;
@@ -296,8 +298,8 @@
 
   .slick-next {
     position: absolute;
-    top: 40%;
-    right: -45px;
+    top: 39%;
+    right: -42px;
     transform: translateY(-40%);
     width: 24px;
     height: 57px;
@@ -323,19 +325,19 @@
     font-family: $roboto;
     font-weight: 700;
     padding: 12px 15px;
+    margin: 0 auto;
   }
 }
 
-.history {
-  &__title {
-    margin: 0 10px 10px 0;
+.visagiste {
+  margin-bottom: 120px;
+
+  &__container {
+    max-width: 1070px;
   }
 
-  &__text {
-    margin-bottom: 55px;
-    text-align: center;
-    font-size: 24px;
-    margin-right: 10px;
+  &__title {
+    margin: 0 10px 10px 0;
   }
 
   &__inner {
@@ -386,19 +388,64 @@
   }
 }
 
+.popular {
+  &__title {
+    margin-bottom: 64px;
+  }
+  &__item {
+    padding-top: 40px;
+  }
+  &__image {
+    margin-bottom: 62px;
+  }
 
+  &__text {
+    padding-bottom: 28px;
+  }
+}
 
+.history {
+  margin-bottom: 125px;
 
+  &__container {
+    max-width: 1130px;
+  }
 
+  &__title {
+    margin-bottom: 17px;
+    margin-right: 1px;
+  }
 
+  &__subtitle {
+    margin-bottom: 60px;
+    margin-right: 3px;
+  }
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__list {
+    display: flex;
+    flex-direction: column;
 
+    &:nth-child(even) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    text-align: center;
+    background: rgba(236, 0, 140, 0.15);
+    padding: 68px 0 54px;
+  }
+}
 
 .footer {
   padding-top: 80px;
   border-top: 1px solid $text;
-  font-weight: 400;
 }
 
 .footer-top {
@@ -408,14 +455,27 @@
   &__title {
     font-size: 24px;
     margin-bottom: 55px;
+    font-weight: 400;
+  }
+
+  &__item {
+    &:first-child {
+      margin-left: 9px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 6px;
+    }
   }
 
   &__link {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 41px;
     color: $text;
+    font-size: 16px;
     transition: all .5s;
     outline: transparent;
+    font-weight: 400;
 
     &:last-child {
       margin-bottom: 70px;
@@ -454,6 +514,7 @@
     display: flex;
     justify-content: space-between;
     padding: 17px 0;
+    margin: 0 19px 0 2px;
   }
 
   &__text {

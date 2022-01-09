@@ -16,7 +16,7 @@ body {
 }
 
 .container  {
-  max-width: 1070px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -59,4 +59,11 @@ body {
   font-size: 36px;
   color: $accent;
   font-weight: 500;
+}
+
+.subtitle {
+  margin-bottom: 55px;
+  text-align: center;
+  font-size: 24px;
+  margin-right: 10px;
 }
