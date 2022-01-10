@@ -373,7 +373,7 @@
       padding-top: 12px;
       margin-bottom: 40px;
     }
-    
+
   }
 
   &__image {
@@ -392,9 +392,11 @@
   &__title {
     margin-bottom: 64px;
   }
+
   &__item {
     padding-top: 40px;
   }
+
   &__image {
     margin-bottom: 62px;
   }
@@ -435,11 +437,23 @@
     }
   }
 
+  &__link {
+
+    &:hover {
+      color: $accent;
+      background: linear-gradient(120deg, #EC008C, #0250c5, #EC008C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all .5s;
+    }
+  }
+
   &__text {
     font-size: 24px;
     text-align: center;
     background: rgba(236, 0, 140, 0.15);
     padding: 68px 0 54px;
+    color: $text;
   }
 }
 
@@ -519,6 +533,29 @@
 
   &__text {
     font-size: 16px;
+  }
+}
+
+.filter-color {
+
+  &__advice {
+    padding: 0 10px;
+  }
+  &__radio {
+    appearance: none;
+  }
+  
+  &__label {
+    &::before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      border-radius: 50%;
+
+    }
+
   }
 }
 
