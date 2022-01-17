@@ -15,4 +15,10 @@ $ (function() {
     slidesToShow: 3,
     slidesToScroll: 3
   });
+
+  $('.base__list').slick({
+    dots: true,
+    fade: true,
+    arrows: false
+  });
 });

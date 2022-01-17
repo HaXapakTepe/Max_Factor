@@ -8,7 +8,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  min-width: 1175px;
+  width: 100%;
   padding: 24px 0 23px 5px;
   z-index: 5;
 
@@ -373,7 +373,6 @@
       padding-top: 12px;
       margin-bottom: 40px;
     }
-
   }
 
   &__image {
@@ -541,10 +540,11 @@
   &__advice {
     padding: 0 10px;
   }
+
   &__radio {
     appearance: none;
   }
-  
+
   &__label {
     &::before {
       content: "";
@@ -556,6 +556,33 @@
 
     }
 
+  }
+}
+
+.base {
+  padding-top: 100px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  &__image {
+    max-width: 700px;
+    position: relative;
+    left: -145px;
+    width: 100%;
+  }
+
+
+  .filter-color {
+    &__title {
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 45px;
+    }
   }
 }
 
