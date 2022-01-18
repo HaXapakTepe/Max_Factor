@@ -22,3 +22,8 @@ $ (function() {
     arrows: false
   });
 });
+
+$('.filter-color__advice').on('click', function () {
+  $(this).toggleClass('filter-color__advice-active');
+  $('.filter-color__advice').not($(this)).removeClass('filter-color__advice-active');
+});
