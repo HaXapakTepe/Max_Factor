@@ -1,0 +1,127 @@
+.top-slider {
+  margin-bottom: 127px;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    position: relative;
+    display: flex !important;
+  }
+
+  &__picture {
+    padding-top: 249px;
+    margin-bottom: 44px;
+  }
+
+  &__image {
+    margin-right: 76px;
+  }
+
+  &__text {
+    max-width: 390px;
+    margin-bottom: 95px;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  &__image-mini {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    z-index: 5;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon/prev.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    right: 56px;
+    transform: translateY(-47%);
+    width: 46px;
+    height: 46px;
+    z-index: 5;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon/next.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      padding: 0 5px;
+
+      button {
+        position: relative;
+        padding: 0;
+        font-size: 0;
+        background-color: transparent;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: transparent;
+        color: $dots;
+        cursor: pointer;
+        outline: transparent;
+        transition: all .3s;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: $dots;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $accent;
+        }
+      }
+
+      &.slick-active {
+        button {
+          &::before {
+            background-color: $accent;
+          }
+        }
+      }
+    }
+  }
+}
