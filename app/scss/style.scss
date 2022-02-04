@@ -31,8 +31,13 @@
     align-items: center;
   }
 
-  .logo {
-    margin-right: 55px;
+}
+
+.logo {
+  margin-right: 55px;
+  &__story {
+    margin-right: 54px;
+    margin-left: 2px;
   }
 }
 
@@ -129,7 +134,7 @@
   margin-right: 15px;
 
   &__image {
-    margin-right: 2px;
+    margin-right: 3px;
     border-bottom: 2px solid transparent;
     transition: all .3s;
 
@@ -171,7 +176,7 @@
 
   &__image-mini {
     position: absolute;
-    right: 5px;
+    right: 0;
     bottom: -1px;
   }
 
@@ -278,7 +283,6 @@
   }
 
   &__title {
-    margin-right: 3px;
     margin-bottom: 62px;
   }
 
@@ -360,14 +364,16 @@
 }
 
 .visagiste {
-  margin-bottom: 120px;
-
   &__container {
     max-width: 1070px;
   }
 
   &__title {
-    margin: 0 10px 10px 0;
+    margin: 0 8px 10px 0;
+  }
+
+  &__subtitle {
+    margin-right: 8px;
   }
 
   &__inner {
@@ -377,13 +383,15 @@
   }
 
   &__info {
-    padding-top: 40px;
+    padding-top: 39px;
+    margin-left: 1px;
   }
 
   &__num {
     font-family: $roboto;
     font-weight: 900;
     font-size: 37px;
+    letter-spacing: -0.7px;
   }
 
   &__accent {
@@ -413,6 +421,7 @@
   &__image {
     display: flex;
     position: relative;
+    margin-bottom: 121px;
   }
 
   &__img-little {
@@ -423,10 +432,6 @@
 }
 
 .popular {
-  &__title {
-    margin-bottom: 62px;
-  }
-
   &__item {
     padding-top: 40px;
   }
@@ -454,8 +459,7 @@
   }
 
   &__title {
-    margin-bottom: 17px;
-    margin-right: 1px;
+    margin-bottom: 18px;
   }
 
   &__title--story {
@@ -472,8 +476,9 @@
     justify-content: center;
   }
 
-  &__list {
-    margin-bottom: 120px;
+  &__link {
+    display: block;
+    margin-bottom: 124px;
     transition: all .5s;
 
     &:hover {
@@ -493,7 +498,9 @@
     }
   }
 
-  &__list--story {
+  &__link--story {
+    margin-bottom: 119px;
+
     &:nth-child(2) {
       margin: 0 40px 0 42px;
     }
@@ -527,7 +534,7 @@
 
   &__title {
     font-size: 24px;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
     font-weight: 400;
   }
 
@@ -538,7 +545,7 @@
     }
 
     &:nth-child(3) {
-      margin-right: 2px;
+      margin-right: 1px;
     }
   }
 
@@ -594,7 +601,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 17px 0;
+    padding: 19px 0 16px 0;
     margin: 0 5px 0 6px;
   }
 
@@ -603,6 +610,7 @@
   }
 
   &__text {
+    font-weight: 400;
     font-size: 16px;
   }
 }
@@ -828,7 +836,7 @@
   &__inner {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 121px;
+    margin-bottom: 122px;
   }
 
   &__box {
@@ -892,13 +900,13 @@
   }
 
   &__title {
-    margin-right: -4px;
-    margin-bottom: 64px;
+    margin-right: -7px;
   }
 
   &__item {
     width: 280px;
     padding-top: 28px;
+    margin-bottom: 85px;
   }
 
   &__image {
@@ -923,24 +931,22 @@
 }
 
 .top {
-
+  
   &__background {
     max-width: 1440px;
     margin: 0 auto 121px;
   }
 
-  &__background-image {
+  &__container {
     position: relative;
-    width: 100%;
   }
 
   &__box {
     position: absolute;
-    width: 1040px;
-    top: 50%;
-    left: 48%;
-    border: 8px solid $text;
-    transform: translate(-45%, -27%);
+    right: 51px;
+    top: 180px;
+    // padding: 0 3px;
+    border: 8px solid #fff;
   }
 
   &__text {
@@ -952,8 +958,8 @@
 
     &:first-child {
       letter-spacing: 43px;
-      padding: 41px 0 62px 46px;
-      padding-top: 41px;
+      padding: 0 0 61px 46px;
+      padding-top: 43px;
     }
 
     &:nth-child(2) {
@@ -965,6 +971,7 @@
     &:nth-child(3) {
       display: inline;
       padding-left: 12px;
+      margin-right: 12px;
       letter-spacing: 50px;
     }
 
@@ -979,7 +986,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 121px;
+    margin-bottom: 122px;
   }
 
   &__image {
@@ -999,7 +1006,7 @@
   }
 
   &__accent {
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 }
 
