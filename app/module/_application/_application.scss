@@ -1,0 +1,61 @@
+.application {
+  &__title {
+    margin-bottom: 62px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 122px;
+  }
+
+  &__box {
+    margin-left: -47px;
+  }
+
+  &__list {
+    position: relative;
+    max-width: 370px;
+    margin-top: 80px;
+  }
+
+  &__item {
+    counter-increment: my-counter;
+    position: relative;
+    left: 38px;
+    margin-top: 97px;
+
+    &:nth-child(2) {
+      margin-top: 70px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 81px;
+    }
+
+    &::marker {
+      font-size: 0px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    right: -20px;
+
+    &::before {
+      position: absolute;
+      content: ''counter(my-counter);
+      font-family: $roboto;
+      font-weight: 400;
+      font-size: 101px;
+      color: $accent;
+      left: -96px;
+      bottom: -23px;
+    }
+
+    &::before:nth-of-type(2) {
+      left: -156px;
+      bottom: -63px;
+    }
+  }
+}

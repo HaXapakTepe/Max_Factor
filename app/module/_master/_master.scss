@@ -1,0 +1,27 @@
+.master {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 122px;
+  }
+
+  &__image {
+    margin-left: 5px;
+  }
+
+  &__item {
+    max-width: 435px;
+    margin-right: 25px;
+  }
+
+  &__text {
+    &:first-child {
+      padding-top: 80px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__accent {
+    margin-bottom: 22px;
+  }
+}

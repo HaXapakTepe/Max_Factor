@@ -1,0 +1,129 @@
+.nova,
+.popular,
+.like {
+  margin-bottom: 136px;
+
+  &__container {
+    max-width: 940px;
+  }
+
+  &__title {
+    margin-bottom: 62px;
+  }
+
+  &__item {
+    position: relative;
+    right: -15px;
+    max-width: 280px;
+    margin: 0 0 84px;
+    padding-top: 30px;
+    background-color: $bg-footer;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(142, 141, 141, 0.4);
+    }
+  }
+
+  &__image {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 39%;
+    left: -41px;
+    transform: translateY(-40%);
+    width: 24px;
+    height: 57px;
+    z-index: 5;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon/left.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 39%;
+    right: -42px;
+    transform: translateY(-40%);
+    width: 24px;
+    height: 57px;
+    z-index: 5;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon/right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    outline: transparent;
+  }
+
+  &__link-box {
+    text-align: center;
+  }
+
+  &__link {
+    font-family: $roboto;
+    padding: 11px 15px;
+    margin: 0 auto;
+  }
+}
+
+.like {
+  &__container {
+    max-width: 920px;
+  }
+
+  .slick-slider {
+    right: -7px;
+  }
+
+  &__title {
+    margin-right: -7px;
+  }
+
+  &__item {
+    width: 280px;
+    padding-top: 28px;
+    margin-bottom: 85px;
+  }
+
+  &__image {
+    margin-bottom: 51px;
+  }
+
+  &__text {
+    padding-bottom: 28px;
+  }
+
+  .slick-prev {
+    left: -51px;
+  }
+
+  .slick-next {
+    right: -51px;
+  }
+
+  &__link-box {
+    margin-right: -18px;
+  }
+}
