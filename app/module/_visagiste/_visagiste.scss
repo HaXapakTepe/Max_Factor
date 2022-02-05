@@ -1,4 +1,6 @@
 .visagiste {
+  margin-bottom: 121px;
+
   &__container {
     max-width: 1070px;
   }
@@ -56,7 +58,6 @@
   &__image {
     display: flex;
     position: relative;
-    margin-bottom: 121px;
   }
 
   &__img-little {

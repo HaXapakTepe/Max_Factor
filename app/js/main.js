@@ -38,3 +38,27 @@ $('.filter-color__compound-subtitle').click(function (event) {
   $('.filter-color__compound-text').not($(this).next()).slideUp(300);
   $(this).toggleClass('active').next().slideToggle(300);
 });
+
+$('.menu__link').click(function (e) {
+  e.preventDefault();
+  $('.menu__burger').removeClass('menu__burger--active');
+});
+
+$('.menu__link').on('click', function () {
+  $(this).toggleClass('menu__link--active');
+  $('.menu__link').not($(this)).removeClass('menu__link--active');
+});
+
+$('.menu__link').click(function (e) {
+  e.preventDefault();
+  $('.menu__list').removeClass('active');
+});
+
+
+$('.menu__burger').on('click', function () {
+  $('.menu__list').toggleClass('active');
+});
+
+$('.menu__burger').on('click', function () {
+  $('.menu__burger').toggleClass('menu__burger--active');
+});

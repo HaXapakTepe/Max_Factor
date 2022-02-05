@@ -1,7 +1,5 @@
 .history {
-  &__container {
-    max-width: 1130px;
-  }
+  margin-bottom: 121px;
 
   &__title {
     margin-bottom: 18px;
@@ -23,7 +21,6 @@
 
   &__link {
     display: block;
-    margin-bottom: 124px;
     transition: all .5s;
 
     &:hover {
@@ -44,8 +41,6 @@
   }
 
   &__link--story {
-    margin-bottom: 119px;
-
     &:nth-child(2) {
       margin: 0 40px 0 42px;
     }

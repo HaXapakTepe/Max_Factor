@@ -1,4 +1,6 @@
 .application {
+  margin-bottom: 122px;
+
   &__title {
     margin-bottom: 62px;
   }
@@ -6,7 +8,6 @@
   &__inner {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 122px;
   }
 
   &__box {
@@ -23,7 +24,7 @@
     counter-increment: my-counter;
     position: relative;
     left: 38px;
-    margin-top: 97px;
+    margin-top: 96px;
 
     &:nth-child(2) {
       margin-top: 70px;

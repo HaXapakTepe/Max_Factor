@@ -1,22 +1,18 @@
-.nova,
-.popular,
 .like {
   margin-bottom: 136px;
 
   &__container {
-    max-width: 940px;
+    max-width: 920px;
   }
 
   &__title {
-    margin-bottom: 62px;
+    margin: 0 -7px 62px 0;
   }
 
   &__item {
-    position: relative;
-    right: -15px;
     max-width: 280px;
-    margin: 0 0 84px;
-    padding-top: 30px;
+    margin: 0 0 82px 13px;
+    padding-top: 28px;
     background-color: $bg-footer;
     transition: all .3s;
     cursor: pointer;
@@ -28,20 +24,24 @@
 
   &__image {
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 54px;
   }
 
   &__text {
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 29px;
+  }
+
+  .slick-slider {
+    right: -7px;
   }
 
   .slick-prev {
     position: absolute;
     top: 39%;
-    left: -41px;
-    transform: translateY(-40%);
+    left: -49px;
+    transform: translateY(-37%);
     width: 24px;
     height: 57px;
     z-index: 5;
@@ -60,8 +60,8 @@
   .slick-next {
     position: absolute;
     top: 39%;
-    right: -42px;
-    transform: translateY(-40%);
+    right: -53px;
+    transform: translateY(-37%);
     width: 24px;
     height: 57px;
     z-index: 5;
@@ -79,51 +79,12 @@
 
   &__link-box {
     text-align: center;
+    margin-right: -18px;
   }
 
   &__link {
     font-family: $roboto;
     padding: 11px 15px;
     margin: 0 auto;
-  }
-}
-
-.like {
-  &__container {
-    max-width: 920px;
-  }
-
-  .slick-slider {
-    right: -7px;
-  }
-
-  &__title {
-    margin-right: -7px;
-  }
-
-  &__item {
-    width: 280px;
-    padding-top: 28px;
-    margin-bottom: 85px;
-  }
-
-  &__image {
-    margin-bottom: 51px;
-  }
-
-  &__text {
-    padding-bottom: 28px;
-  }
-
-  .slick-prev {
-    left: -51px;
-  }
-
-  .slick-next {
-    right: -51px;
-  }
-
-  &__link-box {
-    margin-right: -18px;
   }
 }
