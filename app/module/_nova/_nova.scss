@@ -1,6 +1,4 @@
-.nova,
-.popular,
-.like {
+.nova {
   margin-bottom: 137px;
 
   &__container {
@@ -11,11 +9,15 @@
     margin-bottom: 62px;
   }
 
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__item {
-    position: relative;
-    right: -15px;
     max-width: 280px;
-    margin: 0 0 83px;
+    margin: 0 0 83px 13px;
     padding-top: 30px;
     background-color: $bg-footer;
     transition: all .3s;

@@ -3,27 +3,19 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 25px 0 21px 15px;
+  padding: 25px 0 0 11px;
   z-index: 5;
-
-  &__advice {
-    padding: 19px 0 0 19px;
-  }
-
-  &__story {
-    padding-top: 23px;
-  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
 }
 
 .logo {
   margin: 0 54px 0 -1px;
+  outline: transparent;
 
   &__story {
     margin-right: 54px;
@@ -35,20 +27,20 @@
   padding-top: 10px;
   margin-right: auto;
 
-  &__list {
-    display: flex;
-    margin-right: 40px;
+  &__burger {
+    display: none;
   }
 
-  &__item+.menu__item {
+  &__list {
+    display: flex;
+    margin-right: 37px;
+  }
+
+  &__link+.menu__link {
     padding-left: 31px;
   }
 
-  &__item {
-    &:first-child {
-      margin-left: -3px;
-    }
-
+  &__link {
     &:nth-child(2) {
       padding-right: 2px;
     }
@@ -59,28 +51,6 @@
 
     &:nth-child(4) {
       padding-right: 4px;
-    }
-
-    &:nth-child(5) {
-      padding-right: 2px;
-    }
-  }
-
-  &__item-story {
-    &:first-child {
-      margin: 0 2px 0 -8px;
-    }
-
-    &:nth-child(2) {
-      padding-right: 2px;
-    }
-
-    &:nth-child(3) {
-      padding-right: 3px;
-    }
-
-    &:nth-child(4) {
-      padding-right: 0;
     }
 
     &:nth-child(5) {
@@ -124,7 +94,6 @@
   margin-right: 15px;
 
   &__image {
-    margin-right: 1px;
     border-bottom: 1px solid transparent;
     transition: all .3s;
 
