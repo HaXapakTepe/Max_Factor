@@ -1,4 +1,5 @@
 @media (max-width: 1366px) {
+
   .top-slider {
     &__picture {
       margin-right: 10px;
@@ -8,12 +9,21 @@
       margin-right: 20px;
     }
   }
+
 }
 
 @media (max-width: 1200px) {
-  .top-slider {
-    margin-bottom: 40px;
 
+  .top-slider,
+  .nova,
+  .popular,
+  .visagiste,
+  .history,
+  .like {
+    margin-bottom: 40px;
+  }
+
+  .top-slider {
     &__item {
       margin: 0 15px 30px;
     }
@@ -31,42 +41,76 @@
     &__text {
       margin-bottom: 40px;
     }
+
   }
 
-  .nova {
-    margin-bottom: 40px;
+  .nova,
+  .popular,
+  .like {
 
     &__title {
       margin-bottom: 30px;
     }
-
+    
     &__item {
       margin-bottom: 50px;
     }
-  }
-
-  .visagiste {
-    margin-bottom: 40px;
   }
 
   .subtitle {
     margin-bottom: 30px;
   }
 
-  .popular {
-    margin-bottom: 40px;
-
-    &__title {
-      margin-bottom: 30px;
+  .base {
+    &__inner {
+      justify-content: space-evenly;
     }
 
-    &__item {
-      margin-bottom: 50px;
+    &__image {
+      max-width: 60%;
+      left: 0;
+      margin-right: 10px;
     }
   }
+
+  .filter-color {
+    margin-left: 0;
+
+    &__title {
+      padding-top: 20px;
+    }
+
+    &__compound {
+      &::after {
+        left: 0;
+      }
+    }
+
+    &__compound-subtitle {
+      margin-left: 0;
+
+      &::before {
+        right: 10px;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+
+    &__compound-text {
+      margin-left: 0;
+
+      &::after {
+        left: 0;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 1080px) {
+
   .menu {
     padding: 0;
     margin-right: 0;
@@ -119,10 +163,10 @@
       transform: translate(0, -200%);
       transition: all 0.5s;
       opacity: 0;
-      
+
       &.active {
         visibility: visible;
-        transform: translate(0, 0);
+        transform: translate(0, -6%);
         background-color: $bg;
         opacity: 1;
         transition: all 0.5s;
@@ -148,6 +192,342 @@
   .top-slider {
     &__image-mini {
       display: none !important;
+    }
+  }
+
+  .nova,
+  .popular,
+  .like {
+    &__container {
+      max-width: 580px;
+    }
+
+    &__item {
+      margin-left: 0;
+    }
+
+    .slick-slide {
+      max-width: 300px;
+    }
+
+    .slick-next {
+      right: -31px;
+    }
+  }
+
+  .visagiste {
+    &__text {
+      margin-bottom: 30px;
+
+      &:nth-of-type(2),
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__img-little {
+      display: none;
+    }
+  }
+
+  .history {
+    &__inner {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    &__text {
+      padding: 30px 0;
+      font-size: 22px;
+    }
+
+    &__link {
+      padding: 0 10px;
+    }
+
+    &__link+.history__link {
+      margin-left: 0;
+    }
+  }
+
+  .footer {
+    padding-top: 40px;
+  }
+
+  .base {
+    margin-bottom: 0;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__image {
+      margin: 0 auto;
+    }
+  }
+
+  .filter-color {
+    max-width: 630px;
+    margin: 0 auto;
+
+    &__title,
+    &__text-top,
+    &__text {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__box+.filter-color__box {
+      margin-bottom: 60px;
+    }
+
+    &__text-advice {
+      margin: 0;
+    }
+
+    &__text-mini {
+      display: flex;
+      align-items: center;
+      margin: 0 0 0 auto;
+    }
+
+    &__compound {
+      &::after {
+        margin-bottom: 30px;
+      }
+    }
+
+    .link {
+      display: flex;
+      justify-content: center;
+      max-width: 190px;
+      margin: 0 auto 30px;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .top-slider {
+    margin-bottom: 0;
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__image {
+      max-width: 100%;
+    }
+
+    &__item {
+      margin: 0 auto 30px;
+    }
+
+    &__picture {
+      padding-top: 20px;
+      margin: 0 auto 10px;
+    }
+
+    &__text {
+      max-width: 100%;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .slick-next,
+    .slick-prev {
+      transform: translateY(-500%);
+    }
+  }
+
+  .nova,
+  .popular,
+  .like {
+    &__container {
+      max-width: 290px;
+    }
+
+    .slick-next {
+      right: 15px;
+    }
+
+    .slick-prev {
+      left: 5px;
+    }
+  }
+
+  .visagiste {
+    &__inner {
+      flex-direction: column-reverse;
+      margin: 0;
+    }
+
+    &__img {
+      margin: 0 auto;
+    }
+
+    &__info {
+      margin: 0 auto;
+    }
+  }
+
+  .history {
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 15px 0;
+    }
+
+    &__image {
+      margin: 0 auto;
+    }
+
+    &__text {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    max-width: 190px;
+    margin: 0 auto 30px;
+  }
+
+  .footer-top {
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__item {
+      margin: 0 0 15px;
+      padding: 0 5px;
+      text-align: center;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+
+    &__title,
+    &__link {
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .top-slider {
+    &__item {
+      margin: 0 10px 30px;
+    }
+
+    .slick-next,
+    .slick-prev {
+      transform: translateY(-400%);
+    }
+
+    .slick-next {
+      right: 20px;
+    }
+
+    .slick-prev {
+      left: 20px;
+    }
+  }
+
+  .nova,
+  .popular,
+  .like {
+    &__container {
+      max-width: 250px;
+    }
+
+    &__item {
+      max-width: 250px;
+    }
+
+    .slick-next {
+      right: 5px;
+    }
+
+    .slick-next,
+    .slick-prev {
+      transform: translateY(50%);
+    }
+  }
+
+  .history {
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .footer-bottom {
+    &__text {
+      font-size: 13px;
+
+      &:first-child {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .filter-color {
+    &__title,
+    &__text-top,
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__box {
+      display: block;
+    }
+
+    &__box + .filter-color__box {
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+    }
+
+    &__advice {
+      left: 12px;
+    }
+
+    &__text-advice {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    &__text-mini {
+      align-items: center;
+      justify-content: center;
     }
   }
 }

@@ -18,6 +18,7 @@ body {
 .container  {
   max-width: 1170px;
   margin: 0 auto;
+  padding: 0 5px;
 }
 
 .main {
@@ -74,3 +75,7 @@ body {
   color: $accent;
   font-size: 24px;
 }
+
+// .slick-slide {
+//   max-width: 300px;
+// }

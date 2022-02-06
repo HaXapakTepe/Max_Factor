@@ -1,19 +1,49 @@
 $(function () {
   $('.top-slider__inner').slick({
     dots: true,
-    fade: true
+    fade: true,
   });
 
   $('.nova__inner').slick({
     dots: false,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [{
+        breakpoint: 1081,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   $('.popular__inner').slick({
     dots: false,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [{
+        breakpoint: 1081,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   $('.base__list').slick({
@@ -26,7 +56,22 @@ $(function () {
 $('.like__inner').slick({
   dots: false,
   slidesToShow: 3,
-  slidesToScroll: 3
+  slidesToScroll: 3,
+  responsive: [{
+      breakpoint: 1081,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
 });
 
 $('.filter-color__advice').on('click', function () {
