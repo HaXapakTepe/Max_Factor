@@ -16,22 +16,20 @@
 
   &__list {
     position: relative;
+    left: 39px;
     max-width: 370px;
-    margin-top: 80px;
   }
-
+  
   &__item {
     counter-increment: my-counter;
-    position: relative;
-    left: 38px;
-    margin-top: 96px;
-
-    &:nth-child(2) {
-      margin-top: 70px;
+    
+    &:first-child {
+      padding-top: 96px;
+      margin-bottom: 70px;
     }
 
-    &:nth-child(3) {
-      margin-top: 81px;
+    &:nth-child(2) {
+      margin-bottom: 81px;
     }
 
     &::marker {
@@ -53,10 +51,6 @@
       left: -96px;
       bottom: -23px;
     }
-
-    &::before:nth-of-type(2) {
-      left: -156px;
-      bottom: -63px;
-    }
   }
+
 }
