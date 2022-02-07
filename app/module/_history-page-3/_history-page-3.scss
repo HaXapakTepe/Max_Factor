@@ -9,11 +9,6 @@
     margin: 0 8px 53px 0;
   }
 
-  &__subtitle {
-    margin-bottom: 62px;
-    margin-right: -3px;
-  }
-
   &__inner {
     display: flex;
     justify-content: center;
@@ -30,24 +25,10 @@
       -webkit-text-fill-color: transparent;
       transition: all .5s;
     }
-
-    &:nth-child(2) {
-      margin: 0 31px;
-    }
-
-    &:nth-child(3) {
-      margin-right: 31px;
-    }
   }
 
-  &__link--story {
-    &:nth-child(2) {
-      margin: 0 40px 0 42px;
-    }
-
-    &:nth-child(3) {
-      margin-right: 0;
-    }
+  &__link--story+.history__link--story {
+    margin-left: 31px;
   }
 
   &__text {
